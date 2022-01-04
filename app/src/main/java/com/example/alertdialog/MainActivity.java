@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this,"Toast Message",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Welcome",Toast.LENGTH_LONG).show();
     }
     public void click(View view){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // clicked yes
-                Toast.makeText(MainActivity.this,"Clicked Yes",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Clicked Yes",Toast.LENGTH_LONG).show();
             }
         });
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
